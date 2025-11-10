@@ -24,4 +24,12 @@ export type PostMeta = {
       date: "2025-11-10",
       mdx: () => import("./selling-prompts-best-practices.mdx"),
     },
+    {
+      slug: "mastering-negative-prompts",
+      title: "Mastering Negative Prompts",
+      description: "Cleaner outputs with fewer artifacts—your quick-start playbook.",
+      date: "2025-11-10",
+      cover: "/blog/mastering-negative-prompts/cover.jpg",
+      mdx: () => import("./mastering-negative-prompts.mdx"),
+    }
   ];
