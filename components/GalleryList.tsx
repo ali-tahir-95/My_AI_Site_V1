@@ -1,0 +1,32 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { collection, query, onSnapshot, orderBy } from "firebase/firestore";
+import { db } from "@/lib/firebase";
+
+export default function GalleryList() {
+  const [images, setImages] = useState<any[]>([]);
+
+  useEffect(() => {
+    const q = query(collection(db, "gallery"), orderBy("createdAt", "desc"));
+
+    return onSnapshot(q, (snap) => {
+      const items = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+      setImages(items);
+    });
+  }, []);
+
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
+      {images.map((img) => (
+        <div key={img.id} className="rounded-xl overflow-hidden border border-white/10">
+          <img src={img.imageUrl} className="w-full h-48 object-cover" />
+          <div className="p-3 text-sm">
+            <div className="font-semibold opacity-80">{img.title}</div>
+            <div className="opacity-50">{img.prompt}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
