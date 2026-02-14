@@ -22,8 +22,6 @@ export default function NeonBanner({
 
   return (
     <div className={`neon-container ${className}`}>
-      <div className="background-glow" />
-
       <h2 className={`neon-text ${flicker ? "flicker" : ""}`}>
         {text.map((line, index) => (
           <span key={index}>
@@ -36,31 +34,13 @@ export default function NeonBanner({
       <style jsx>{`
         .neon-container {
           position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          display: inline-block;
           text-align: center;
           padding: 1.5rem 1rem;
-          overflow: hidden;
-        }
-
-        .background-glow {
-          position: absolute;
-          width: 500px;
-          height: 500px;
-          background: radial-gradient(
-            circle,
-            rgba(125, 78, 255, 0.25) 0%,
-            rgba(206, 73, 180, 0.15) 40%,
-            transparent 70%
-          );
-          filter: blur(100px);
-          z-index: 0;
+          background: transparent; /* fully transparent */
         }
 
         .neon-text {
-          position: relative;
-          z-index: 1;
           font-size: clamp(1.6rem, 4vw, 3.4rem);
           font-weight: 400;
           font-family: "Poppins", "Inter", sans-serif;
