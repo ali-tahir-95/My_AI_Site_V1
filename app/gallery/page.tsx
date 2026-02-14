@@ -22,7 +22,7 @@ export default function GalleryPage() {
         ) : user ? (
           <UploadArtForm />
         ) : (
-          <div className="p-6 sm:p-8 border border-white/10 rounded-xl bg-white/5 text-center">
+          <div className="p-6 sm:p-8 border border-white/10 rounded-xl bg-black/50 text-center">
             <h2 className="text-xl sm:text-2xl font-semibold mb-2">
                Showcase your AI creations
             </h2>

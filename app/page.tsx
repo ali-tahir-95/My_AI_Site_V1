@@ -5,7 +5,7 @@ import NeonFlourish from "../components/NeonFlourish";
 
 export default function Home() {
   return (
-    <section className="pt-28 sm:pt-32 px-4 sm:px-6 text-center bg-black">
+    <section className="pt-28 sm:pt-32 px-4 sm:px-6 text-center">
       <div className="max-w-5xl mx-auto">
 
         {/* Keep original heading */}

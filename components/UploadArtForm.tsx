@@ -59,7 +59,7 @@ export default function UploadArtForm() {
   }
 
   return (
-    <div className="p-6 border border-white/10 rounded-xl bg-white/5 space-y-5">
+    <div className="p-6 border border-white/10 rounded-xl bg-black/50 space-y-5">
       {/* Title */}
       <input
         type="text"
