@@ -12,6 +12,7 @@ export const metadata = {
     icon: "/icon.png",
     shortcut: "/icon.png",
     apple: "/icon.png",
+    themeColor: "#000000",
   },
 };
 
