@@ -29,7 +29,7 @@ export default function RootLayout({
       <head>
   <meta name="theme-color" content="#000000" />
 </head>
-      <body className="min-h-screen flex flex-col font-sans relative text-white">
+      <body className="min-h-screen flex flex-col font-sans relative text-white bg-black">
 
         {/* Mesh Background (bottom layer) */}
         <div
