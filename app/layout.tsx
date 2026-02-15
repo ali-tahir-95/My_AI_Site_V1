@@ -8,11 +8,11 @@ import { FirebaseProvider } from "@/components/FirebaseProvider";
 export const metadata = {
   title: "Graphyx.art",
   description: "Generate & explore AI-created art.",
+  themeColor: "#000000",
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
     apple: "/icon.png",
-    themeColor: "#000000",
   },
 };
 
