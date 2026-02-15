@@ -6,8 +6,13 @@ import Footer from "@/components/Footer";
 import { FirebaseProvider } from "@/components/FirebaseProvider";
 
 export const metadata = {
-  title: "AI Art Gallery",
+  title: "Graphyx.art",
   description: "Generate & explore AI-created art.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
