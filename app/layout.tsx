@@ -8,12 +8,15 @@ import { FirebaseProvider } from "@/components/FirebaseProvider";
 export const metadata = {
   title: "Graphyx.art",
   description: "Generate & explore AI-created art.",
-  themeColor: "#000000",
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
     apple: "/icon.png",
   },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#000000" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
 };
 
 export default function RootLayout({
@@ -23,6 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+  <meta name="theme-color" content="#000000" />
+</head>
       <body className="min-h-screen flex flex-col font-sans relative text-white">
 
         {/* Mesh Background (bottom layer) */}
