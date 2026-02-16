@@ -47,7 +47,7 @@ export default function Navbar() {
           </Link>
 
           <Link href="/blog" className={navItemClass("/blog")}>
-            Blog
+          Journal
           </Link>
 
           <Link
@@ -105,7 +105,7 @@ export default function Navbar() {
             className={`block ${navItemClass("/blog")}`}
             onClick={() => setOpen(false)}
           >
-            Blog
+            Journal
           </Link>
 
           <Link

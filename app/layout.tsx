@@ -6,8 +6,12 @@ import Footer from "@/components/Footer";
 import { FirebaseProvider } from "@/components/FirebaseProvider";
 
 export const metadata = {
-  title: "Graphyx.art",
-  description: "Generate & explore AI-created art.",
+  title: {
+    default: "Graphyx Art | Next-Gen Creations",
+    template: "%s | Graphyx Art",
+  },
+  description:
+    "Graphyx is a next-generation Art platform for exploring, and publishing cutting-edge digital artwork and generative creations.",
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
@@ -18,6 +22,7 @@ export const metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
   ],
 };
+
 
 export default function RootLayout({
   children,

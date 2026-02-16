@@ -8,7 +8,7 @@ export default function CollectionPage() {
   const { user, loading } = useFirebase();
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-28 sm:pt-16">
       <div className="mb-8 sm:mb-12">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-brand to-blue-500 bg-clip-text text-transparent leading-tight">
           The Finest Collection of Exquisitely Refined Art
