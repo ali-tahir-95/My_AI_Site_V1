@@ -41,7 +41,7 @@ export default function RootLayout({
         />
 
         {/* Black Overlay (middle layer) */}
-        <div className="fixed inset-0 -z-10 bg-black/70" />
+        <div className="fixed inset-0 -z-10 bg-black/80" />
 
         <FirebaseProvider>
           <Navbar />

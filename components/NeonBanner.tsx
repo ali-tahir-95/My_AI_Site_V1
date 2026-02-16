@@ -36,12 +36,12 @@ export default function NeonBanner({
           position: relative;
           display: inline-block;
           text-align: center;
-          padding: 1.5rem 1rem;
-          background: transparent; /* fully transparent */
+          padding: 1.2rem 0.8rem;
+          background: transparent;
         }
 
         .neon-text {
-          font-size: clamp(1.6rem, 4vw, 3.4rem);
+          font-size: clamp(1.1rem, 2.8vw, 2.4rem);
           font-weight: 400;
           font-family: "Poppins", "Inter", sans-serif;
           letter-spacing: 0.01em;

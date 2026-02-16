@@ -36,7 +36,7 @@ export default function NeonFlourish({ flipped = false }: NeonFlourishProps) {
 
         .neon-line {
           fill: none;
-          stroke-width: 3.5; /* VERY THIN */
+          stroke-width: 2; /* VERY THIN */
           stroke-linecap: round;
           stroke-linejoin: round;
           animation: flourishColorShift 1.2s linear infinite,
