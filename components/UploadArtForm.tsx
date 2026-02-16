@@ -23,7 +23,6 @@ export default function UploadArtForm() {
 
     const fileType = file.type.startsWith("video") ? "video" : "image";
     const fileRef = ref(storage, `gallery/${uuid()}-${file.name}`);
-
     const uploadTask = uploadBytesResumable(fileRef, file);
 
     uploadTask.on(
@@ -59,14 +58,26 @@ export default function UploadArtForm() {
   }
 
   return (
-    <div className="p-6 border border-white/10 rounded-xl bg-black/50 space-y-5">
-      {/* Title */}
+    <div className="p-6 border border-white/10 rounded-xl bg-black/50 space-y-6">
+
+      {/* Heading Section */}
+      <div>
+        <h2 className="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-brand to-blue-500 bg-clip-text text-transparent leading-tight">
+          Present Your Creation
+        </h2>
+
+        <p className="text-sm opacity-70 mt-2">
+          Share your refined work with the Graphyx community and become part of a curated digital collection.
+        </p>
+      </div>
+
+      {/* Title Input */}
       <input
         type="text"
         placeholder="Art title..."
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        className="w-full rounded-lg p-3 bg-black/40 border border-brand/30 focus:border-brand outline-none text-white placeholder-white/40"
+        className="w-full rounded-lg p-3 bg-black/40 border border-brand/30 focus:border-brand outline-none text-white placeholder-white/40 transition"
       />
 
       {/* Prompt */}
@@ -74,12 +85,14 @@ export default function UploadArtForm() {
         placeholder="Prompt used..."
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
-        className="w-full rounded-lg p-3 bg-black/40 border border-brand/30 focus:border-brand outline-none text-white placeholder-white/40"
+        className="w-full rounded-lg p-3 bg-black/40 border border-brand/30 focus:border-brand outline-none text-white placeholder-white/40 transition"
       />
 
       {/* File Input */}
       <label className="block">
-        <span className="text-sm opacity-70 mb-1 block">Upload Image or Video</span>
+        <span className="text-sm opacity-70 mb-2 block">
+          Upload Image or Video
+        </span>
         <input
           type="file"
           accept="image/*,video/*"
@@ -103,11 +116,13 @@ export default function UploadArtForm() {
               style={{ width: `${progress}%` }}
             />
           </div>
-          <div className="text-xs text-right opacity-70">{progress}%</div>
+          <div className="text-xs text-right opacity-70">
+            {progress}%
+          </div>
         </div>
       )}
 
-      {/* Button */}
+      {/* Upload Button */}
       <button
         onClick={handleUpload}
         disabled={!file || loading}
