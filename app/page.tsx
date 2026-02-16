@@ -9,7 +9,7 @@ export default function Home() {
 
         {/* Hero Heading */}
         <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-brand to-pink-500 bg-clip-text text-transparent leading-tight">
-          Celebrating refined art from visionary creators
+          Celebrating Refined Art From Visionary Creators
         </h1>
 
         <p className="opacity-80 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mb-12 text-white">

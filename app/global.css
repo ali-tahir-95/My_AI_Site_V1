@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 html, body {
-  color: white;
+  color: black;
   min-height: 100%;
 }

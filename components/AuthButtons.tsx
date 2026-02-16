@@ -1,36 +1,41 @@
 "use client";
 
 import { useFirebase } from "./FirebaseProvider";
+import Spinner from "./Spinner";
 
 export default function AuthButtons() {
   const { user, loading, signInWithGoogle, signOutUser } = useFirebase();
 
+  const neonGlow =
+    "shadow-[0_0_6px_rgba(155,92,255,0.8),0_0_18px_rgba(155,92,255,1)]";
+
   if (loading) {
-    return <div className="text-sm opacity-70">Loading...</div>;
+    return (
+      <div className="flex items-center justify-center px-3">
+        <Spinner size={20} />
+      </div>
+    );
   }
 
   return (
     <div className="flex items-center gap-3">
       {user ? (
         <>
-          {/* Profile Image */}
           {user.photoURL && (
             <img
               src={user.photoURL}
               alt="Profile"
-              className="w-9 h-9 rounded-full border border-white/20 object-cover"
+              className="w-9 h-9 rounded-full border border-[#9b5cff] object-cover shadow-[0_0_12px_rgba(155,92,255,0.6)]"
             />
           )}
 
-          {/* Name (hide on very small screens if needed later) */}
-          <span className="text-sm opacity-80 hidden sm:inline">
+          <span className="text-sm text-[#caa6ff] hidden sm:inline">
             {user.displayName || user.email}
           </span>
 
-          {/* Sign Out */}
           <button
             onClick={signOutUser}
-            className="px-3 py-1.5 rounded-lg border border-brand text-brand hover:bg-brand hover:text-white transition text-sm"
+            className={`px-3 py-1.5 rounded-lg border border-[#9b5cff] text-[#caa6ff] hover:bg-[#9b5cff] hover:text-black transition duration-300 text-sm ${neonGlow}`}
           >
             Sign out
           </button>
@@ -38,9 +43,9 @@ export default function AuthButtons() {
       ) : (
         <button
           onClick={signInWithGoogle}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-brand text-white hover:opacity-90 transition text-sm font-medium shadow-md"
+          className={`flex items-center gap-2 px-4 py-2 rounded-lg border border-[#9b5cff] text-[#caa6ff] hover:bg-[#9b5cff] hover:text-black transition duration-300 text-sm font-medium ${neonGlow}`}
         >
-          {/* Google Icon */}
+          {/* Official Google Icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 48 48"
